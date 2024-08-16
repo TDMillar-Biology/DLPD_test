@@ -1,35 +1,41 @@
 ---
-title: Home
+title: DLPD Home
 layout: home
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# Drosophila Laboratory Pangenome Database (DLPD)
+Since T.H. Morgan and his associates in the famous Fly Room began their foundational work in genetics using the mighty fruit fly _Drosophila melanogaster_, numerous strains of _D. melanogaster_ with diverse genetic backgrounds have been used in laboratories worldwide. These include transgenic strains, deficiency strains, RNAi, genome editing, and balancers, as well as wild-type strains (e.g., Oregon-R, w1118, Canton-S). The genetic background of these strains differs from the reference strain ISO1 and is unknown. These uncharacterized differences confound the interpretation of experiments investigating the genotype-phenotype relationship using these non-reference laboratory strains. To solve this problem, we introduce the Drosophila Laboratory Pangenome Database (DLPD), a collection of ever-growing reference genome assemblies of popular _D. melanogaster_ laboratory strains. Although we will release eleven genome assemblies initially, more will be added in the future (depending on the feedback from the community). 
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+# Submit a Sequencing Request for your Strain of Interest
+Do you work with a popular strain of _D. melanogaster_ that doesn't have a high-quality reference genome assembly? Please submit the following form to request that we sequence your strain of interest for inclusion in our database: [Google Forms DLPD Request](https://forms.gle/2m8gByd5vhed84xM9) (Strains requested by multiple labs will be prioritized)
 
-More specifically, the created site:
+# Data Access
+We are in the final stage of setting up a genome browser for easy access to this data and will provide a link to the browser and the full dataset here. Stay tuned!
+Meanwhile, please send any requests for the genome assembly or the raw reads to either tdmillar@tamu.edu or mahul@tamu.edu
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+# Assembly Statistics for Strains in DLPD to Date
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+| Strain   | N50* (Mb)  | L50*  | Significance |
+|----------|------------|-----| --------------|
+| ISO1 (v6.53)     | 21.4     | 3   | The primary reference assembly for D. Melanogaster |
+| [BL5905](https://bdsc.indiana.edu/Home/Search?presearch=5905)   | 24.21     | 3   | W1118 wild type strain |
+| [BL3605](https://bdsc.indiana.edu/Home/Search?presearch=3605)  | 24.21     | 4   | W1118 wild type strain |
+| [BL5](https://bdsc.indiana.edu/Home/Search?presearch=5)      | 22.97     | 4   | Oregon-R-C wild type strain|
+| [BL64349](https://bdsc.indiana.edu/Home/Search?presearch=64349) | 24.18    | 3   | Canton-S wild type strain |
+| [BL36303](https://bdsc.indiana.edu/Home/Search?presearch=36303) | 24.16    | 3   | phiC31 integrase-mediated transformation |
+| [BL36304](https://bdsc.indiana.edu/Home/Search?presearch=36304) | 23.93    | 4   | phiC31 integrase-mediated transformation |
+| [BL54591](https://bdsc.indiana.edu/Home/Search?presearch=54591) | 23.63    | 3   | Expresses Cas9 protein under control of nanos regulatory sequences |
+| [BL25211](https://bdsc.indiana.edu/Home/Search?presearch=25211)  | 24.46     | 3   | Used in modENCODE functional genomics experiments |
+| [BL8765](https://bdsc.indiana.edu/Home/Search?presearch=8765)** | 24.58    | 3   | GAL4 expression in the nervous system and CyO balancer |
+| [BL3954](https://bdsc.indiana.edu/Home/Search?presearch=3954)** | 22.26    | 4   | GAL4 expression driven by Act5C promoter, TM6B balancer |
+| [BL36283](https://bdsc.indiana.edu/Home/Search?presearch=36283)** | 22.91    | 4   | Piggybac mobilization, FRT site, balancers FM7a, and TM3 |
+| [BL4737](https://bdsc.indiana.edu/Home/Search?presearch=4737) | 24.31    | 3   | D. simulans strain. Produces fertile female offspring when crossed with D. melanogaster |
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+*N50 and L50 are measures used to evaluate the quality of genome assemblies. The contig N50 is a value in megabase pairs which quantifies how well the assembly process has pieced together the genome. Specifically, 50% of the assembly is found in contigs (pieces) that are N50_value or longer. The L50 represents the number of contigs that represent the same 50% of the genome assembly. ISO1 reference assembly statistics are included for reference. 
 
-To get started with creating a site, simply:
+**Hi-C contact data is being used to phase and improve de novo genome assemblies for the balancer chromosomes
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+# Citation
+We are writing a manuscript describing DLPD, and we'll post the citation here once the paper is ready. Meanwhile, you can use this resource for your work. Please let us know if you want to publish results utilizing this resource before we have a manuscript.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
 
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate

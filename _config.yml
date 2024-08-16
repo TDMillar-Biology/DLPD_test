@@ -3,3 +3,13 @@ description: Drosophila Laboratory Pangenome Database
 theme: just-the-docs
 
 url: https://TDMillar-Biology.github.io/DLPD
+
+nav:
+  - title: Home
+    url: /
+
+  - title: Genome Browser
+    url: /genome-browser/
+
+  - title: test page
+    url: /test-page/
